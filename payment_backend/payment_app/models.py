@@ -9,7 +9,7 @@ class User(models.Model):
     created_at = models.DateTimeField(default=timezone.now)
     is_verified = models.BooleanField(default=False)
     last_login = models.DateTimeField(blank=True, null=True)
-
+    upi_id = models.CharField(max_length=50, blank=True, null=True,unique=True)
     def __str__(self):
         return self.name
     
